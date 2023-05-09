@@ -14,9 +14,10 @@ Rails.application.routes.draw do
 
   # for geo controller
   get("/street_to_coords/new", {:controller => "geo", :action => "blank_street"})
+  get("/coords_to_weather/new", {:controller => "geo", :action => "blank_weather"})
 
   get("/street_to_coords/results", {:controller => "geo", :action => "lookup_coordinates"})
-
+  get("/coords_to_weather/results", {:controller => "geo", :action => "lookup_weather"})
 
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
